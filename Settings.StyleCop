@@ -226,7 +226,7 @@
         <BooleanProperty Name="IgnorePrivates">True</BooleanProperty>
         <BooleanProperty Name="IgnoreInternals">True</BooleanProperty>
         <StringProperty Name="CompanyName">Spotted Zebra</StringProperty>
-        <StringProperty Name="Copyright">Copyright 2013 Spotted Zebra</StringProperty>
+        <StringProperty Name="Copyright">Copyright 2016 Spotted Zebra</StringProperty>
         <BooleanProperty Name="IncludeFields">False</BooleanProperty>
       </AnalyzerSettings>
     </Analyzer>

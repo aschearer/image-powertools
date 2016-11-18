@@ -33,7 +33,7 @@ As the name suggests the project contains a set of tools to help manage your ima
 
     image-powertool
 
-    Spotted Zebra Power Tools: Increase your efficiency when working with images.
+    Image Power Tools: Increase your efficiency when working with images.
       -h, -?, --help             Prints this help message.
           --tool=NAME            NAME of the tool you want to run. Valid options:
 

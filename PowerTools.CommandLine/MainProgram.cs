@@ -47,7 +47,7 @@
             PowerToolConsoleProgramBase program = null;
             if (showHelp || string.IsNullOrEmpty(toolName))
             {
-                Console.WriteLine("Spotted Zebra Power Tools: Increase your efficiency when working with images.");
+                Console.WriteLine("Image Power Tools: Increase your efficiency when working with images.");
                 options.WriteOptionDescriptions(Console.Out);
             }
             else
