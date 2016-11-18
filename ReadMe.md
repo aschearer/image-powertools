@@ -1,10 +1,19 @@
-# Spotted Zebra's Image Power Tools
+Spotted Zebra's Image Power Tools
+===
 While developing [Tumblestone][1] we needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings changed or our marketing images changed! So I wrote these tools to automate the process.
 
-## Requirements
+Questions, bug reports or feature requests?
+---
+
+Contributing
+---
+
+How to Build
+---
 Power Tools is a command line program written for Windows. It requires .NET 4.6.1.
 
-## How it Works
+How to Run
+---
 As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][2]. In PowerShell or Command navigate to the exe and run:
 
     image-powertool
@@ -29,7 +38,7 @@ By default the program prints its help. Next let's specify a tool to run:
       -h, -?, --help             Prints this help message.
           --config=PATH          PATH to JSON configuration file.
 
-Just like before the program printed it's help. But this time the help is scoped to the tool you invoked. The final piece of the puzzle is a JSON configuration file which the tool will use in order to operate.
+Just like before the program printed its help. But this time the help is scoped to the tool you invoked. The final piece of the puzzle is a JSON configuration file which the tool will use in order to operate.
 
 [1]: http://tumblestonegame.com
 [2]: download url
