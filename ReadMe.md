@@ -56,6 +56,12 @@ By default the program prints its help. Next let's specify a tool to run:
 
 Just like before the program printed its help. But this time the help is scoped to the tool you invoked. The final piece of the puzzle is a JSON configuration file which the tool will use in order to operate.
 
+TODO
+
+1. Give example of configuration file
+1. Talk through results
+1. Link to detailed instructions for each tool
+
 [1]: http://tumblestonegame.com
 [2]: download url
 [3]: contributing url
