@@ -10,8 +10,7 @@ Contributing
 ---
 As this projected is maintained by one person, I cannot fix every bug or implement every feature on my own. So contributions are really appreciated!
 
-A good way to get started (flow)
-
+A good way to get started:
 
 1. Fork the ImagePowerTools repos. 
 1. Create a new branch in you current repos from the 'master' branch.
@@ -26,7 +25,7 @@ See [LICENSE.txt](LICENSE.txt) for details.
 
 How to Build
 ---
-Image Power Tools is a command line program written for Windows. It requires .NET 4.6.1. Use Visual studio 2012/2013/2015 and open solution file. You may need to restore Nuget packages on first run.
+Image Power Tools is a command line program written for Windows. It requires .NET 4.6.1. Use Visual Studio and open solution file. You may need to restore Nuget packages on first run.
 
 How to Run
 ---
