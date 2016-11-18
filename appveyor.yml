@@ -1,0 +1,6 @@
+artifacts:
+  - path: PowerTools.CommandLine\bin\Release\*.dll
+  - path: PowerTools.CommandLine\bin\Release\*.exe
+  - path: PowerTools.CommandLine\bin\Release\*.txt
+  - path: PowerTools.CommandLine\bin\Release\*.md
+    name: image-powertool.zip
