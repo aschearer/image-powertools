@@ -142,7 +142,8 @@
                                 this.Info("Finished job {0} of {1}", i, batch.Jobs.Length);
                             }
 
-                            this.Info("Tool finished.");
+                            var toolDescription = (PowerToolAttribute)Attribute.GetCustomAttribute(typeof(T), typeof(PowerToolAttribute));
+                            Console.WriteLine("Finished running tool: {0}.", toolDescription.Name);
                         }
                     }
                 }
