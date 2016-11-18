@@ -4,7 +4,7 @@ Image Power Tools
 
 While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! So I wrote this tool to automate the process.
 
-Questions, bug reports or feature requests?
+Questions, Bug Reports or Feature Requests?
 ---
 Do you have feature requests, questions or would you like to report a bug? Please post them on the [issue list][4] and follow [these guidelines][3].
 
