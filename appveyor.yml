@@ -1,6 +1,14 @@
+version: 1.0.{build}
+configuration:
+- Release
+- Debug
+platform: Any CPU
+before_build:
+- ps: nuget restore
+build:
+  verbosity: minimal
+after_build:
+- ps: 7z a image-powertools.zip %APPVEYOR_BUILD_FOLDER%\PowerTools.CommandLine\bin\Release\*.dll %APPVEYOR_BUILD_FOLDER%\PowerTools.CommandLine\bin\Release\*.exe %APPVEYOR_BUILD_FOLDER%\PowerTools.CommandLine\bin\Release\*.txt %APPVEYOR_BUILD_FOLDER%\PowerTools.CommandLine\bin\Release\*.md
 artifacts:
-  - path: PowerTools.CommandLine\bin\Release\*.dll
-  - path: PowerTools.CommandLine\bin\Release\*.exe
-  - path: PowerTools.CommandLine\bin\Release\*.txt
-  - path: PowerTools.CommandLine\bin\Release\*.md
-    name: image-powertool.zip
+- path: image-powertools.zip
+  name: image-powertools.zip
