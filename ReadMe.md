@@ -2,7 +2,7 @@
 While developing [Tumblestone][1] we needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings changed or our marketing images changed! So I wrote these tools to automate the process.
 
 ## Requirements
-Power Tools is a command line program written for Windows. It requires .NET 4.5.2.
+Power Tools is a command line program written for Windows. It requires .NET 4.6.1.
 
 ## How it Works
 As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][2]. In PowerShell or Command navigate to the exe and run:
