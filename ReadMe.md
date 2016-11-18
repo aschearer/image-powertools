@@ -1,5 +1,7 @@
 Image Power Tools
 ===
+[![Build status](https://ci.appveyor.com/api/projects/status/i7j8axrrek8vxscr?svg=true)](https://ci.appveyor.com/project/aschearer/image-powertools)
+
 While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! So I wrote this tool to automate the process.
 
 Questions, bug reports or feature requests?
