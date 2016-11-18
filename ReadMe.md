@@ -17,8 +17,7 @@ A good way to get started:
 1. Fork the Image Power Tools repos. 
 1. Create a new branch in you current repos from the 'master' branch.
 1. 'Check out' the code with Git or [GitHub Desktop](https://desktop.github.com/)
-1. Check [contributing][3]
-1. Push commits and create a Pull Request (PR) to ImagePowerTools
+1. Push commits and create a Pull Request (PR)
 
 License
 ---
@@ -33,7 +32,7 @@ How to Run
 ---
 As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][two]. In PowerShell or Command navigate to the exe and run:
 
-    image-powertool
+    image-powertools
 
     Image Power Tools: Increase your efficiency when working with images.
       -h, -?, --help             Prints this help message.
@@ -47,7 +46,7 @@ As the name suggests the project contains a set of tools to help manage your ima
 
 By default the program prints its help. Next let's specify a tool to run:
 
-    image-powertool --tool=OverlayText
+    image-powertools --tool=OverlayText
 
     OverlayText: Add text to an image inside a bounding box.
     How to operate:
