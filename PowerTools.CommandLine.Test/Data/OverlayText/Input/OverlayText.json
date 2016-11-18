@@ -1,0 +1,43 @@
+﻿{
+  "OutputFolderPath": "Output/OverlayText",
+  "Debug": false,
+  "LogFilePath":  "PowerToolLog.txt",
+  "Jobs": [
+    {
+      // Define default information for the job
+      "Name": "Image1",
+      "ImagePath": "Data/OverlayText/header_image_460x215.png",
+      "FontName": "Dwarven Stonecraft",
+      "FontColor": "#333333",
+      "MaxFontSize": 48,
+      "OutputImageNameTemplate": "Image1_{0}.png",
+      "BoundingBox": {
+        "X": 120,
+        "Y": 82,
+        "Width": 221,
+        "Height": 35
+      },
+      "Labels": [
+        {
+          "Name": "en-US",
+          "Value": "Starter Pack"
+        },
+        {
+          "Name": "de-DE",
+          "Value": "Mehrspieler-Starterpaket"
+        },
+        {
+          "Name": "zh-CN",
+          "Value": "多玩家新手包",
+          "FontName": "Noto Sans CJK SC Regular"
+        },
+        {
+          "Name": "ja-JP",
+          "Value": "マルチプレイスターターパック",
+          "FontName": "Noto Sans CJK JP Regular",
+          "DisableAntiAliasing": true
+        }
+      ]
+    },
+  ]
+}

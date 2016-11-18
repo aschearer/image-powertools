@@ -1,0 +1,20 @@
+﻿{
+  "OutputFolderPath": "Output/ComposeImages",
+  "Debug": false,
+  "LogFilePath":  "PowerToolLog.txt",
+  "Jobs": [
+    {
+      "Name": "AvailableNowEndSlate",
+      // Format for generated images. There should be as many placeholders as ImagesToCombinePaths
+      "OutputImageNameTemplate": "AvailableNowEndSlate_{0}_{1}_{2}.png",
+      // These are used in every image being generated
+      "BaseImagesFolderPath": "Data/ComposeImages/Input/Common",
+      // Paths to folders containing images to be combined with the base images and each other
+      "ImagesToCombinePaths": [
+        "Data/ComposeImages/Input/AvailableNow",
+        "Data/ComposeImages/Input/Ratings",
+        "Data/ComposeImages/Input/Platforms"
+      ]
+    }
+  ]
+}

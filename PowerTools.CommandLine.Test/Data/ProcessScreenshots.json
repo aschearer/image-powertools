@@ -1,0 +1,7 @@
+﻿{
+  "OutputFolderPath": "Output",
+  "InputFolderPath": "Screenshots",
+  "Debug": false,
+  "LogFilePath": "PowerToolLog.txt",
+  "TargetPlatforms": [ "PS4", "XboxOne", "WiiU", "Steam" ]
+}

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.Core", "PowerTools.Core\PowerTools.Core.csproj", "{54447734-D8BB-4AE8-9393-578158904F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine", "PowerTools.CommandLine\PowerTools.CommandLine.csproj", "{9CDC6D69-0A70-4C58-AC75-924A3BD57F44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B554E72E-9330-4B65-A92C-5E604DA721C8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		License.txt = License.txt
+		ReadMe.md = ReadMe.md
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine.Test", "PowerTools.CommandLine.Test\PowerTools.CommandLine.Test.csproj", "{712C0D06-492E-448A-82CA-F09944F2C73A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54447734-D8BB-4AE8-9393-578158904F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54447734-D8BB-4AE8-9393-578158904F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54447734-D8BB-4AE8-9393-578158904F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54447734-D8BB-4AE8-9393-578158904F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDC6D69-0A70-4C58-AC75-924A3BD57F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDC6D69-0A70-4C58-AC75-924A3BD57F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDC6D69-0A70-4C58-AC75-924A3BD57F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDC6D69-0A70-4C58-AC75-924A3BD57F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712C0D06-492E-448A-82CA-F09944F2C73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712C0D06-492E-448A-82CA-F09944F2C73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712C0D06-492E-448A-82CA-F09944F2C73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712C0D06-492E-448A-82CA-F09944F2C73A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
