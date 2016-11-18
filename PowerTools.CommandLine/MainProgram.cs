@@ -3,6 +3,7 @@
     using Core;
     using NDesk.Options;
     using NLog;
+    using NLog.Config;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
@@ -16,6 +17,8 @@
 
         public static void Main(string[] args)
         {
+            LogManager.Configuration = new LoggingConfiguration();
+
             var availableTools = MainProgram.GetAttributesInAssembly(typeof(PowerToolAttribute).Assembly);
             var availableToolDescriptions = new List<string>();
             foreach (var tool in availableTools)

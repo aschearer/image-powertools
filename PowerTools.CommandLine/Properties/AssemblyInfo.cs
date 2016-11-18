@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SpottedZebra.PowerTools.CommandLine")]
+[assembly: AssemblyTitle("image-powertool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Spotted Zebra LLC")]
-[assembly: AssemblyProduct("SpottedZebra.PowerTools.CommandLine")]
+[assembly: AssemblyProduct("image-powertool")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
