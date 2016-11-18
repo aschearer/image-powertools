@@ -21,7 +21,7 @@ A good way to get started:
 License
 ---
 Image Power Tools is open source software, licensed under the terms of MIT license. 
-See [LICENSE.txt](LICENSE.txt) for details.
+See [License.txt](License.txt) for details.
 
 How to Build
 ---
@@ -29,7 +29,7 @@ Image Power Tools is a command line program written for Windows. It requires .NE
 
 How to Run
 ---
-As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][2]. In PowerShell or Command navigate to the exe and run:
+As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][two]. In PowerShell or Command navigate to the exe and run:
 
     image-powertool
 
@@ -62,6 +62,6 @@ TODO
 1. Link to detailed instructions for each tool
 
 [1]: http://tumblestonegame.com
-[2]: download url
-[3]: contributing url
-[4]: issue url
+[two]: https://github.com/aschearer/image-powertools
+[3]: https://github.com/aschearer/image-powertools
+[4]: https://github.com/aschearer/image-powertools/issues
