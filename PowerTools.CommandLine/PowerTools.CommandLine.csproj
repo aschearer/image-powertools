@@ -129,6 +129,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\ThirdParty\StyleCop\4.7\StyleCop.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>del /F "$(TargetDir)NLog.xml"
+del /F "$(TargetDir)Newtonsoft.Json.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
