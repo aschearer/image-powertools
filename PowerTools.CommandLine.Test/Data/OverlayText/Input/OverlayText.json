@@ -7,7 +7,7 @@
       // Define default information for the job
       "Name": "Image1",
       "ImagePath": "Data/OverlayText/header_image_460x215.png",
-      "FontName": "Dwarven Stonecraft",
+      "FontName": "Times New Roman",
       "FontColor": "#333333",
       "MaxFontSize": 48,
       "OutputImageNameTemplate": "Image1_{0}.png",
@@ -29,12 +29,13 @@
         {
           "Name": "zh-CN",
           "Value": "多玩家新手包",
-          "FontName": "Noto Sans CJK SC Regular"
+          "FontName": "Arial",
+          "DisableAntiAliasing": true
         },
         {
           "Name": "ja-JP",
           "Value": "マルチプレイスターターパック",
-          "FontName": "Noto Sans CJK JP Regular",
+          "FontName": "Arial",
           "DisableAntiAliasing": true
         }
       ]
