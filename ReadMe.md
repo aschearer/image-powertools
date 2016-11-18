@@ -57,6 +57,70 @@ By default the program prints its help. Next let's specify a tool to run:
 
 Just like before the program printed its help. But this time the help is scoped to the tool you invoked. The final piece of the puzzle is a JSON configuration file which the tool will use in order to operate.
 
+Overlaying Text on Images
+---
+Imagine you need to create Steam capsule images for an upcoming sale. You've got a capsule image and some localized text to be inserted in a space in the center of each image. Using the `OverlayText` tool you can do this automatically. First let's start with your files on disk:
+
+    C:\Example
+    C:\Example\Capsule1.png
+    C:\Example\PrepareCapsule.json
+
+`Capsule1.png` is your image and `PrepareCapsule.json` is the configuration file needed by the Power Tool. The configuration file will contain the text you want to add to the image as well as additional information. Open the configuration file and enter:
+
+    {
+      "OutputFolderPath": "Output", // Relative path where the generated images will be saved 
+      "Debug": false, // Set to true if you want to debug information overlaid on the generated images
+      "LogFilePath":  "OverlayImagesLog.txt", // If you want logs use this, else delete
+      // You can define one or more jobs to be executed by the tool. In this case we just have one
+      "Jobs": [
+        {
+          "Name": "MyFirstJob", // The job's name
+          "ImagePath": "Example/Capsule1.png", // Relative path from the execution directory to the template image
+          "FontName": "Times New Roman", // Font name which is installed on the computer
+          "FontColor": "#333333", // Any hex value will work. Put alpha first if you want transparency
+          "MaxFontSize": 48, // The maximum size text will be rendered at -- defaults to 64
+          "OutputImageNameTemplate": "Capsule_{0}.png", // Format string for the generated images
+          // This is the rectangle in which the text will be drawn
+          "BoundingBox": {
+            "X": 120,
+            "Y": 82,
+            "Width": 221,
+            "Height": 35
+          },
+          // The text to be rendered. Label names will be inserted in the OutputImageNameTemplate to name the generated images
+          "Labels": [
+            {
+              "Name": "en-US",
+              "Value": "Starter Pack"
+            },
+            {
+              "Name": "de-DE",
+              "Value": "Mehrspieler-Starterpaket"
+            },
+            {
+              "Name": "zh-CN",
+              "Value": "多玩家新手包",
+              "FontName": "Arial", // You can override the font for Asian languages
+              "DisableAntiAliasing": true // You can disable anti-aliasing if you want, use trial and error to find the right settings
+            },
+            {
+              "Name": "ja-JP",
+              "Value": "マルチプレイスターターパック",
+              "FontName": "Arial",
+              "DisableAntiAliasing": true
+            }
+          ]
+        },
+      ]
+    }
+
+With the configuration file defined we're all set to run the tool. From the `C:\` directory run:
+
+    image-powertools --tool=OverlayText --config=Example\PrepareCapsule.json
+    Finished running tool: OverlayText.
+
+Now you can navigate to `C:\Output` and view the four generated images.
+
 TODO
 
 1. Give example of configuration file
