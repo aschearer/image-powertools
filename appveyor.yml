@@ -17,3 +17,8 @@ after_build:
 artifacts:
 - path: image-powertools.zip
   name: image-powertools.zip
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: 6pCLvKt9/2YfMv4pRwtkFrizsnAsKICCQcAJW+aztA6D899r31YH/i2c+NtsdomL
+  artifact: image-powertools.zip
