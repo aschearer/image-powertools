@@ -1,6 +1,6 @@
 Image Power Tools
 ===
-While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! So I wrote these tools to automate the process.
+While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! So I wrote this tool to automate the process.
 
 Questions, bug reports or feature requests?
 ---
@@ -12,7 +12,7 @@ As this projected is maintained by one person, I cannot fix every bug or impleme
 
 A good way to get started:
 
-1. Fork the ImagePowerTools repos. 
+1. Fork the Image Power Tools repos. 
 1. Create a new branch in you current repos from the 'master' branch.
 1. 'Check out' the code with Git or [GitHub Desktop](https://desktop.github.com/)
 1. Check [contributing][3]
