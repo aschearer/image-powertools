@@ -1,5 +1,9 @@
 version: 1.0.{build}
-skip_tags: true
+branches:
+  only:
+    - master
+  except:
+    - gh-pages
 configuration:
 - Release
 platform: Any CPU
@@ -23,3 +27,6 @@ deploy:
   auth_token:
     secure: 6pCLvKt9/2YfMv4pRwtkFrizsnAsKICCQcAJW+aztA6D899r31YH/i2c+NtsdomL
   artifact: image-powertools.zip
+  on:
+    branch: master
+    appveyor_repo_tag: true
