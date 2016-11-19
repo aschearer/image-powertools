@@ -6,7 +6,7 @@ While developing [Tumblestone][1] I needed to create a lot of images. In all the
 
 Questions, Bug Reports or Feature Requests?
 ---
-Do you have feature requests, questions or would you like to report a bug? Please post them on the [issue list][4] and follow [these guidelines][3].
+Do you have feature requests, questions or would you like to report a bug? Please post them on the [issue list][4].
 
 Contributing
 ---
@@ -33,7 +33,6 @@ How to Run
 As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][two]. In PowerShell or Command navigate to the exe and run:
 
     image-powertools
-
     Image Power Tools: Increase your efficiency when working with images.
       -h, -?, --help             Prints this help message.
           --tool=NAME            NAME of the tool you want to run. Valid options:
@@ -47,7 +46,6 @@ As the name suggests the project contains a set of tools to help manage your ima
 By default the program prints its help. Next let's specify a tool to run:
 
     image-powertools --tool=OverlayText
-
     OverlayText: Add text to an image inside a bounding box.
     How to operate:
       -v, --verbose              All logging will be written to the console.
