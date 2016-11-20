@@ -3,7 +3,6 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using SpottedZebra.PowerTools.CommandLine;
     using System.IO;
-    using System;
 
     [TestClass]
     public class TestPowerTools
@@ -13,7 +12,8 @@
         [DeploymentItem(@"Data\ComposeImages\Expected\", @"Data\ComposeImages\Expected\")]
         public void TestComposeImages()
         {
-            var args = new string[] {
+            var args = new string[]
+            {
                 "test",
                 "--tool=ComposeImages",
                 @"--config=Data\ComposeImages\ComposeImages.json"
@@ -52,7 +52,8 @@
         [DeploymentItem(@"Data\OverlayText\Expected\", @"Data\OverlayText\Expected\")]
         public void TestOvelayText()
         {
-            var args = new string[] {
+            var args = new string[]
+            {
                 "test",
                 "--tool=OverlayText",
                 @"--config=Data\OverlayText\OverlayText.json"
@@ -134,7 +135,7 @@
             // Return the success of the comparison. "file1byte" is 
             // equal to "file2byte" at this point only if the files are 
             // the same.
-            return ((file1byte - file2byte) == 0);
+            return (file1byte - file2byte) == 0;
         }
     }
 }

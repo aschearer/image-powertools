@@ -26,7 +26,7 @@ See [License.txt](License.txt) for details.
 
 How to Build
 ---
-Image Power Tools is a command line program written for Windows. It requires .NET 4.6.1. Use Visual Studio and open solution file. You may need to restore Nuget packages on first run.
+Image Power Tools is a command line program written for Windows. It requires .NET 4.6.1. Use Visual Studio and open solution file under `Source`. You may need to restore Nuget packages on first run.
 
 How to Run
 ---

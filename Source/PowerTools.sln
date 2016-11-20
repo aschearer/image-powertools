@@ -9,14 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine", "P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B554E72E-9330-4B65-A92C-5E604DA721C8}"
 	ProjectSection(SolutionItems) = preProject
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-		License.txt = License.txt
-		ReadMe.md = ReadMe.md
-		Settings.StyleCop = Settings.StyleCop
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\appveyor.yml = ..\appveyor.yml
+		..\License.txt = ..\License.txt
+		..\ReadMe.md = ..\ReadMe.md
+		..\Settings.StyleCop = ..\Settings.StyleCop
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine.Test", "PowerTools.CommandLine.Test\PowerTools.CommandLine.Test.csproj", "{712C0D06-492E-448A-82CA-F09944F2C73A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine.Test", "..\Tests\PowerTools.CommandLine.Test\PowerTools.CommandLine.Test.csproj", "{712C0D06-492E-448A-82CA-F09944F2C73A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
