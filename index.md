@@ -2,11 +2,9 @@
 layout: default
 title: Image Power Tools
 ---
-{{ site.project_name }}
-===
 While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! I wrote this tool to automate the process.
 
-How It Work
+How It Works
 ---
 As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [{{ site.project_name }}][2]. In PowerShell or Command navigate to the exe and run:
 
