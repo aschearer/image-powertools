@@ -22,13 +22,3 @@ after_build:
 artifacts:
 - path: image-powertools.zip
   name: image-powertools.zip
-deploy:
-- provider: GitHub
-  auth_token:
-    secure: 6pCLvKt9/2YfMv4pRwtkFrizsnAsKICCQcAJW+aztA6D899r31YH/i2c+NtsdomL
-  artifact: image-powertools.zip
-  release: Image Power Tools v$(appveyor_build_version)
-  draft: true
-  on:
-    branch: master
-    appveyor_repo_tag: true
