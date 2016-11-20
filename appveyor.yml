@@ -17,7 +17,7 @@ before_build:
 - ps: nuget restore
 build:
   verbosity: minimal
-  project: Source/PowerTools.sln
+  project: Source\PowerTools.sln
 after_build:
 - cmd: 7z a image-powertools.zip "%APPVEYOR_BUILD_FOLDER%\Source\PowerTools.CommandLine\bin\Release\*.dll" "%APPVEYOR_BUILD_FOLDER%\Source\PowerTools.CommandLine\bin\Release\*.exe" "%APPVEYOR_BUILD_FOLDER%\PowerTools.CommandLine\bin\Release\*.txt" "%APPVEYOR_BUILD_FOLDER%\Source\PowerTools.CommandLine\bin\Release\*.md"
 artifacts:
