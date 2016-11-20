@@ -2,7 +2,7 @@ Image Power Tools
 ===
 [![Build status](https://ci.appveyor.com/api/projects/status/i7j8axrrek8vxscr?svg=true)](https://ci.appveyor.com/project/aschearer/image-powertools)
 
-While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! So I wrote this tool to automate the process.
+While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! I wrote this tool to automate the process.
 
 Questions, Bug Reports or Feature Requests?
 ---
@@ -14,8 +14,8 @@ As this projected is maintained by one person, I cannot fix every bug or impleme
 
 A good way to get started:
 
-1. Fork the Image Power Tools repos. 
-1. Create a new branch in you current repos from the 'master' branch.
+1. Fork the Image Power Tools repo. 
+1. Create a new branch in you current repo from the 'master' branch.
 1. 'Check out' the code with Git or [GitHub Desktop](https://desktop.github.com/)
 1. Push commits and create a Pull Request (PR)
 
@@ -30,7 +30,7 @@ Image Power Tools is a command line program written for Windows. It requires .NE
 
 How to Run
 ---
-As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Power Tools Command][two]. In PowerShell or Command navigate to the exe and run:
+As the name suggests the project contains a set of tools to help manage your images. To get started download the latest executable here: [Image Power Tools][2]. In PowerShell or Command navigate to the exe and run:
 
     image-powertools
     Image Power Tools: Increase your efficiency when working with images.
@@ -168,6 +168,6 @@ Just like before, we're all set to run the tool. From the `C:\` directory run:
 Now you can navigate to `C:\Output` and view the generated images.
 
 [1]: http://tumblestonegame.com
-[two]: https://github.com/aschearer/image-powertools
+[2]: https://github.com/aschearer/image-powertools/releases/latest
 [3]: https://github.com/aschearer/image-powertools
 [4]: https://github.com/aschearer/image-powertools/issues
