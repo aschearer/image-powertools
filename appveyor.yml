@@ -14,7 +14,7 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 before_build:
-- ps: nuget restore
+- ps: nuget restore Source\PowerTools.sln
 build:
   verbosity: minimal
   project: Source\PowerTools.sln
