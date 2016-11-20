@@ -1,8 +1,8 @@
 ---
 layout: default
-title: {{ site.project_name }}
+title: Image Power Tools
 ---
-{{ page.title }}
+{{ site.project_name }}
 ===
 While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! I wrote this tool to automate the process.
 
