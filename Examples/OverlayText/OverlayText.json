@@ -1,0 +1,46 @@
+﻿{
+  "OutputFolderPath": "Output", // Relative path where the generated images will be saved 
+  "Debug": false, // Set to true if you want to debug information overlaid on the generated images
+  "LogFilePath":  "OverlayTextLog.txt", // If you want logs use this, else delete
+  // You can define one or more jobs to be executed by the tool. In this case we just have one
+  "Jobs": [
+    {
+      "Name": "MyFirstJob", // The job's name
+      "ImagePath": "Capsule1.png", // Relative path from the execution directory to the template image
+      "FontName": "Times New Roman", // Font name which is installed on the computer
+      "FontColor": "#333333", // Any hex value will work. Put alpha first if you want transparency
+      "MaxFontSize": 48, // The maximum size text will be rendered at -- defaults to 64
+      "OutputImageNameTemplate": "Capsule1_{0}.png", // Format string for the generated images
+      // This is the rectangle in which the text will be drawn
+      "BoundingBox": {
+        "X": 152,
+        "Y": 120,
+        "Width": 317,
+        "Height": 51
+      },
+      // The text to be rendered. Label names will be inserted in the OutputImageNameTemplate to name the generated images
+      "Labels": [
+        {
+          "Name": "en-US",
+          "Value": "Starter Pack"
+        },
+        {
+          "Name": "de-DE",
+          "Value": "Mehrspieler-Starterpaket"
+        },
+        {
+          "Name": "zh-CN",
+          "Value": "多玩家新手包",
+          "FontName": "Arial", // You can override the font for Asian languages
+          "DisableAntiAliasing": true // You can disable anti-aliasing if you want, use trial and error to find the right settings
+        },
+        {
+          "Name": "ja-JP",
+          "Value": "マルチプレイスターターパック",
+          "FontName": "Arial",
+          "DisableAntiAliasing": true
+        }
+      ]
+    }
+  ]
+}

@@ -170,8 +170,11 @@
                     var prop = batchType.GetProperty(member.Name, BindingFlags.Public | BindingFlags.Instance);
                     if (prop != null && prop.CanWrite)
                     {
-                        var value = prop.GetValue(batch);
-                        prop.SetValue(batch, Path.Combine(configPath, (string)value), null);
+                        var value = (string)prop.GetValue(batch);
+                        if (!string.IsNullOrEmpty(value))
+                        {
+                            prop.SetValue(batch, Path.Combine(configPath, value), null);
+                        }
                     }
                 }
             }
@@ -223,6 +226,8 @@
         {
             if (!string.IsNullOrEmpty(logFilePath) && LogManager.Configuration != null)
             {
+                logFilePath = Path.Combine(Environment.CurrentDirectory, logFilePath);
+
                 // Configure all tracing to go to the designated log file.
                 var logFile = new FileTarget();
                 logFile.Name = "LogToFile";

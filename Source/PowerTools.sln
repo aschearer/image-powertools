@@ -19,6 +19,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerTools.CommandLine.Test", "..\Tests\PowerTools.CommandLine.Test\PowerTools.CommandLine.Test.csproj", "{712C0D06-492E-448A-82CA-F09944F2C73A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{313D7540-54FB-47DE-8C8A-F5762B479CE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OverlayText", "OverlayText", "{1D6AC796-1C72-45E3-BF58-72635DA178BC}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\OverlayText\Capsule1.png = ..\Examples\OverlayText\Capsule1.png
+		..\Examples\OverlayText\OverlayText.json = ..\Examples\OverlayText\OverlayText.json
+		..\Examples\OverlayText\OverlayTextExample.md = ..\Examples\OverlayText\OverlayTextExample.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComposeImages", "ComposeImages", "{762E1630-96EB-4A3E-A0BC-B71CF316C1F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{A763DB74-6120-4258-9548-F9D0F5585768}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\ComposeImages\ComposeImages.json = ..\Examples\ComposeImages\ComposeImages.json
+		..\Examples\ComposeImages\ComposeImagesExample.md = ..\Examples\ComposeImages\ComposeImagesExample.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{EBE4DF22-DE11-4AB2-8AA4-C21DA203BE2E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\ComposeImages\Input\Languages\de-DE.png = ..\Examples\ComposeImages\Input\Languages\de-DE.png
+		..\Examples\ComposeImages\Input\Languages\en-US.png = ..\Examples\ComposeImages\Input\Languages\en-US.png
+		..\Examples\ComposeImages\Input\Languages\ja-JP.png = ..\Examples\ComposeImages\Input\Languages\ja-JP.png
+		..\Examples\ComposeImages\Input\Languages\zh-CN.png = ..\Examples\ComposeImages\Input\Languages\zh-CN.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ratings", "Ratings", "{2FC16787-E2FD-4D68-BDDA-884E4D29CA6A}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\ComposeImages\Input\Ratings\ESRB_E.png = ..\Examples\ComposeImages\Input\Ratings\ESRB_E.png
+		..\Examples\ComposeImages\Input\Ratings\PEGI_3.png = ..\Examples\ComposeImages\Input\Ratings\PEGI_3.png
+		..\Examples\ComposeImages\Input\Ratings\USK_0.png = ..\Examples\ComposeImages\Input\Ratings\USK_0.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{45C084FB-AA6C-4165-9442-C990EB88A96E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\ComposeImages\Input\Platforms\Blank.png = ..\Examples\ComposeImages\Input\Platforms\Blank.png
+		..\Examples\ComposeImages\Input\Platforms\NOA.png = ..\Examples\ComposeImages\Input\Platforms\NOA.png
+		..\Examples\ComposeImages\Input\Platforms\NOE.png = ..\Examples\ComposeImages\Input\Platforms\NOE.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0A5C65A7-7BC1-49C8-8064-B6D2F8272319}"
+	ProjectSection(SolutionItems) = preProject
+		..\Examples\ComposeImages\Input\Common\Background.png = ..\Examples\ComposeImages\Input\Common\Background.png
+		..\Examples\ComposeImages\Input\Common\CompanyLogo.png = ..\Examples\ComposeImages\Input\Common\CompanyLogo.png
+		..\Examples\ComposeImages\Input\Common\GameLogo.png = ..\Examples\ComposeImages\Input\Common\GameLogo.png
+		..\Examples\ComposeImages\Input\Common\Website.png = ..\Examples\ComposeImages\Input\Common\Website.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,5 +87,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{313D7540-54FB-47DE-8C8A-F5762B479CE7} = {B554E72E-9330-4B65-A92C-5E604DA721C8}
+		{1D6AC796-1C72-45E3-BF58-72635DA178BC} = {313D7540-54FB-47DE-8C8A-F5762B479CE7}
+		{762E1630-96EB-4A3E-A0BC-B71CF316C1F8} = {313D7540-54FB-47DE-8C8A-F5762B479CE7}
+		{A763DB74-6120-4258-9548-F9D0F5585768} = {762E1630-96EB-4A3E-A0BC-B71CF316C1F8}
+		{EBE4DF22-DE11-4AB2-8AA4-C21DA203BE2E} = {A763DB74-6120-4258-9548-F9D0F5585768}
+		{2FC16787-E2FD-4D68-BDDA-884E4D29CA6A} = {A763DB74-6120-4258-9548-F9D0F5585768}
+		{45C084FB-AA6C-4165-9442-C990EB88A96E} = {A763DB74-6120-4258-9548-F9D0F5585768}
+		{0A5C65A7-7BC1-49C8-8064-B6D2F8272319} = {A763DB74-6120-4258-9548-F9D0F5585768}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,20 @@
+﻿{
+  "OutputFolderPath": "Output",
+  "Debug": false,
+  "LogFilePath":  "ComposeImagesLog.txt",
+  "Jobs": [
+    {
+      "Name": "EndSlate",
+      // Format for generated images. There should be as many placeholders as ImagesToCombinePaths
+      "OutputImageNameTemplate": "EndSlate_{0}_{1}_{2}.png",
+      // These are used in every image being generated
+      "BaseImagesFolderPath": "Input/Common",
+      // Paths to folders containing images to be combined with the base images and each other
+      "ImagesToCombinePaths": [
+        "Input/Languages",
+        "Input/Ratings",
+        "Input/Platforms"
+      ]
+    }
+  ]
+}
