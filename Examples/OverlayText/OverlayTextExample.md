@@ -4,7 +4,6 @@ Imagine you need to create Steam capsule images for an upcoming sale. You've got
 
     Examples\OverlayText
     Examples\OverlayText\Capsule1.png
-    Examples\OverlayText\Capsule2.png
     Examples\OverlayText\OverlayText.json
 
 `Capsule1.png` is your image and `OverlayText.json` is the configuration file needed by the Power Tool. The configuration file will contain the text you want to add to the image as well as additional information. Open the configuration file and enter:
@@ -56,7 +55,7 @@ Imagine you need to create Steam capsule images for an upcoming sale. You've got
     ]
     }
 
-With the configuration file defined we're all set to run the tool. From the `Examples\` directory run:
+With the configuration file defined we're all set to run the tool. From the `Examples` directory run:
 
     image-powertools --tool=OverlayText --config=OverlayText\OverlayText.json
     Finished running tool: OverlayText. Exited with code: 0 The program exited without errors.
