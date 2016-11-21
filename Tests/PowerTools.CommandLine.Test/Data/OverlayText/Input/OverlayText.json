@@ -1,12 +1,12 @@
 ﻿{
-  "OutputFolderPath": "Output/OverlayText",
+  "OutputFolderPath": "Output",
   "Debug": false,
   "LogFilePath":  "PowerToolLog.txt",
   "Jobs": [
     {
       // Define default information for the job
       "Name": "Image1",
-      "ImagePath": "Data/OverlayText/header_image_460x215.png",
+      "ImagePath": "header_image_460x215.png",
       "FontName": "Times New Roman",
       "FontColor": "#333333",
       "MaxFontSize": 48,

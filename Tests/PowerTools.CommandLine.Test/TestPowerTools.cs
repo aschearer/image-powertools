@@ -21,7 +21,7 @@
 
             MainProgram.Main(args);
 
-            var outputDir = "Output/ComposeImages";
+            var outputDir = "Data/ComposeImages/Output";
             if (!Directory.Exists(outputDir))
             {
                 Assert.Fail("Failed to create output directory");
@@ -61,7 +61,7 @@
 
             MainProgram.Main(args);
 
-            var outputDir = "Output/OverlayText";
+            var outputDir = "Data/OverlayText/Output";
             if (!Directory.Exists(outputDir))
             {
                 Assert.Fail("Failed to create output directory");
