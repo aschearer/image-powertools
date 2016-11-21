@@ -6,16 +6,16 @@
     {
       // Define default information for the job
       "Name": "Image1",
-      "ImagePath": "header_image_460x215.png",
+      "ImagePath": "Capsule1.png",
       "FontName": "Times New Roman",
       "FontColor": "#333333",
       "MaxFontSize": 48,
       "OutputImageNameTemplate": "Image1_{0}.png",
       "BoundingBox": {
-        "X": 120,
-        "Y": 82,
-        "Width": 221,
-        "Height": 35
+        "X": 103,
+        "Y": 150,
+        "Width": 412,
+        "Height": 53
       },
       "Labels": [
         {

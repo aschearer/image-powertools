@@ -23,10 +23,10 @@ Imagine you need to create Steam capsule images for an upcoming sale. You've got
         "OutputImageNameTemplate": "Capsule1_{0}.png", // Format string for the generated images
         // This is the rectangle in which the text will be drawn
         "BoundingBox": {
-            "X": 152,
-            "Y": 120,
-            "Width": 317,
-            "Height": 51
+            "X": 103,
+            "Y": 150,
+            "Width": 412,
+            "Height": 53
         },
         // The text to be rendered. Label names will be inserted in the OutputImageNameTemplate to name the generated images
         "Labels": [

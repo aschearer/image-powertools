@@ -220,7 +220,7 @@
     <Content Include="Data\OverlayText\Expected\Image1_zh-CN.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\OverlayText\Input\header_image_460x215.png">
+    <Content Include="Data\OverlayText\Input\Capsule1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
