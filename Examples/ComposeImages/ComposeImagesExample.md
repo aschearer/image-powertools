@@ -49,4 +49,4 @@ Just like before, we're all set to run the tool. From the `Examples\` directory 
     image-powertools --tool=ComposeImages --config=Examples\ComposeImages\ComposeImages.json
     Finished running tool: ComposeImages. Exited with code: 0 The program exited without errors.
 
-Now you can navigate to `Examples\ComposImages\Output` and view the generated images.
+Now you can navigate to `Examples\ComposeImages\Output` and view the generated images.
