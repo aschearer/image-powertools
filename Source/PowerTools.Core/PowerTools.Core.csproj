@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\RelativePathAttribute.cs" />
     <Compile Include="ILogAdapter.cs" />
     <Compile Include="Tools\ExitCode.cs" />
     <Compile Include="Tools\OverlayText.cs" />

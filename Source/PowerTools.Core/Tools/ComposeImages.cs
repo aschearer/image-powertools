@@ -21,6 +21,7 @@
             {
                 this.Error("BaseImagesFolderPath does not exist");
                 result = ExitCode.ComposeImages_BaseImagesFolderNotFound;
+                return result;
             }
 
             var baseImage = this.CreateBaseImage(jobDescription, ref result);

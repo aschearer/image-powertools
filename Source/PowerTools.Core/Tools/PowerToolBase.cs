@@ -1,6 +1,7 @@
 ﻿namespace SpottedZebra.PowerTools.Core.Tools
 {
     using Data;
+    using System.IO;
 
     /// <summary>
     /// Provide logging and other common functionality for PowerTools.

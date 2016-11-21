@@ -135,6 +135,10 @@ del /F "$(TargetDir)Newtonsoft.Json.xml"
 xcopy /R /Y "$(SolutionDir)..\License.txt" "$(TargetDir)"
 xcopy /R /Y  "$(SolutionDir)..\ReadMe.md" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

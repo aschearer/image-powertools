@@ -15,9 +15,11 @@
         public string OutputImageNameTemplate { get; set; }
 
         [DataMember(IsRequired = true)]
+        [RelativePath]
         public string BaseImagesFolderPath { get; set; }
 
         [DataMember(IsRequired = true)]
+        [RelativePath]
         public string[] ImagesToCombinePaths { get; set; }
     }
 }

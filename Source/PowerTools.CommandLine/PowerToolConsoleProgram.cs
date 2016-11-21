@@ -12,6 +12,7 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.IO;
+    using System.Reflection;
 
     /// <summary>
     /// This class exposes a PowerTool to the user as a console application.
@@ -86,70 +87,136 @@
                     result = ExitCode.BadConfiguration;
                 }
 
-                PowerToolConsoleProgram<T, J>.ConfigureLoggingToFile(batch.LogFilePath);
-                var logger = new NLogAdapter(PowerToolConsoleProgram<T, J>.logger);
-                if (string.IsNullOrEmpty(batch.OutputFolderPath))
+                if (result == ExitCode.Success)
                 {
-                    this.Error("No output directory specified.");
-                    result = ExitCode.BadConfiguration;
-                }
-                else
-                {
-                    if (!Directory.Exists(batch.OutputFolderPath))
+                    PowerToolConsoleProgram<T, J>.SetPathsRelativeToConfigFile(configFile, batch);
+                    PowerToolConsoleProgram<T, J>.ConfigureLoggingToFile(batch.LogFilePath);
+                    var logger = new NLogAdapter(PowerToolConsoleProgram<T, J>.logger);
+                    if (string.IsNullOrEmpty(batch.OutputFolderPath))
                     {
-                        this.Info("Creating output directory: {0}", batch.OutputFolderPath);
-                        Directory.CreateDirectory(batch.OutputFolderPath);
-                    }
-
-                    if (batch.Jobs == null)
-                    {
-                        this.Warn("No jobs defined.");
+                        this.Error("No output directory specified.");
+                        result = ExitCode.BadConfiguration;
                     }
                     else
                     {
-                        var worker = new T();
-                        worker.Setup(batch, logger);
-
-                        this.Info("Starting {0} jobs", batch.Jobs.Length);
-
-                        var processedJobs = new HashSet<string>();
-                        int i = 0;
-
-                        foreach (var job in batch.Jobs)
+                        if (!Directory.Exists(batch.OutputFolderPath))
                         {
-                            if (processedJobs.Contains(job.Name))
+                            this.Info("Creating output directory: {0}", batch.OutputFolderPath);
+                            Directory.CreateDirectory(batch.OutputFolderPath);
+                        }
+
+                        if (batch.Jobs == null)
+                        {
+                            this.Warn("No jobs defined.");
+                        }
+                        else
+                        {
+                            var worker = new T();
+                            worker.Setup(batch, logger);
+
+                            this.Info("Starting {0} jobs", batch.Jobs.Length);
+
+                            var processedJobs = new HashSet<string>();
+                            int i = 0;
+
+                            foreach (var job in batch.Jobs)
                             {
-                                this.Warn("Duplicate job name: {0}. Skipping job.", job.Name);
-                                continue;
+                                if (processedJobs.Contains(job.Name))
+                                {
+                                    this.Warn("Duplicate job name: {0}. Skipping job.", job.Name);
+                                    continue;
+                                }
+
+                                if (result != ExitCode.Success)
+                                {
+                                    break;
+                                }
+
+                                result = worker.Process(job);
+                                processedJobs.Add(job.Name);
+
+                                i++;
+                                this.Info("Finished job {0} of {1}", i, batch.Jobs.Length);
                             }
-
-                            if (result != ExitCode.Success)
-                            {
-                                break;
-                            }
-
-                            result = worker.Process(job);
-                            processedJobs.Add(job.Name);
-
-                            i++;
-                            this.Info("Finished job {0} of {1}", i, batch.Jobs.Length);
                         }
                     }
                 }
             }
 
+            Console.WriteLine(
+                "Finished running tool: {0}. Exited with code: {1:N0} {2}",
+                toolDescription.Name,
+                (int)result,
+                PowerToolConsoleProgram<T, J>.GetExitCodeDescription(result));
+            return result;
+        }
+
+        /// <summary>
+        /// Uses reflection to loop through the BatchDescription and JobDescriptions and update
+        /// any property with a RelativePath attribute so that they start with the path from
+        /// the current execution directory to the configuration directory.
+        /// </summary>
+        private static void SetPathsRelativeToConfigFile(string configFile, BatchDescription<J> batch)
+        {
+            var configPath = Path.GetDirectoryName(configFile);
+
+            var batchType = batch.GetType();
+            var batchMembers = batchType.GetMembers(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
+            foreach (var member in batchMembers)
+            {
+                var attributes = member.GetCustomAttributes(typeof(RelativePathAttribute), false);
+                if (attributes.Length > 0)
+                {
+                    var prop = batchType.GetProperty(member.Name, BindingFlags.Public | BindingFlags.Instance);
+                    if (prop != null && prop.CanWrite)
+                    {
+                        var value = prop.GetValue(batch);
+                        prop.SetValue(batch, Path.Combine(configPath, (string)value), null);
+                    }
+                }
+            }
+
+            foreach (var job in batch.Jobs)
+            {
+                var jobType = job.GetType();
+                var jobMembers = jobType.GetMembers(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
+                foreach (var member in jobMembers)
+                {
+                    var attributes = member.GetCustomAttributes(typeof(RelativePathAttribute), false);
+                    if (attributes.Length > 0)
+                    {
+                        var prop = jobType.GetProperty(member.Name, BindingFlags.Public | BindingFlags.Instance);
+                        if (prop != null && prop.CanWrite)
+                        {
+                            var value = prop.GetValue(job);
+                            if (value is string)
+                            {
+                                prop.SetValue(job, Path.Combine(configPath, (string)value), null);
+                            }
+                            else if (value is string[])
+                            {
+                                var paths = (string[])value;
+                                for (int i = 0; i < paths.Length; i++)
+                                {
+                                    paths[i] = Path.Combine(configPath, paths[i]);
+                                }
+
+                                prop.SetValue(job, paths, null);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private static string GetExitCodeDescription(ExitCode result)
+        {
             string exitCodeDescription = "Unknown error code";
             var exitCodeType = result.GetType();
             var memberInfo = exitCodeType.GetMember(result.ToString());
             var attributes = memberInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
             exitCodeDescription = ((DescriptionAttribute)attributes[0]).Description;
-
-            Console.WriteLine(
-                "Finished running tool: {0}. Exited with code: {1:N0} {2}", 
-                toolDescription.Name, 
-                (int)result,
-                exitCodeDescription);
-            return result;
+            return exitCodeDescription;
         }
 
         private static void ConfigureLoggingToFile(string logFilePath)

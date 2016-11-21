@@ -12,6 +12,7 @@
         public string Name { get; set; }
 
         [DataMember(IsRequired = true)]
+        [RelativePath]
         public string ImagePath { get; set; }
 
         [DataMember(IsRequired = true)]

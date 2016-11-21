@@ -11,12 +11,14 @@
     internal sealed class BatchDescription<J> where J : IJobDescription
     {
         [DataMember(IsRequired = true)]
+        [RelativePath]
         public string OutputFolderPath { get; set; }
 
         [DataMember]
         public bool Debug { get; set; }
 
         [DataMember]
+        [RelativePath]
         public string LogFilePath { get; set; }
 
         [DataMember(IsRequired = true)]
