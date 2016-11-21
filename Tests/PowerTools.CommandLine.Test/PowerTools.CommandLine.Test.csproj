@@ -223,15 +223,6 @@
     <Content Include="Data\OverlayText\Input\header_image_460x215.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\OverlayText\Input\large_capsule_image_467x181.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\OverlayText\Input\main_capsule_image_616x353.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\OverlayText\Input\small_capsule_image_231x87.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\ComposeImages\Input\ComposeImages.json">

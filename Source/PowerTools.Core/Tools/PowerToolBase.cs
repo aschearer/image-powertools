@@ -1,4 +1,4 @@
-﻿namespace SpottedZebra.PowerTools.Core
+﻿namespace SpottedZebra.PowerTools.Core.Tools
 {
     using Data;
 
@@ -25,12 +25,12 @@
             this.logger = logger;
         }
 
-        internal void Process(T jobDescription)
+        internal ExitCode Process(T jobDescription)
         {
-            this.OnProcess(jobDescription);
+            return this.OnProcess(jobDescription);
         }
 
-        protected abstract void OnProcess(T jobDescription);
+        protected abstract ExitCode OnProcess(T jobDescription);
 
         protected void Info(string format, params object[] args)
         {

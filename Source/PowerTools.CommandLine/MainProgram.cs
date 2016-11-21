@@ -1,6 +1,7 @@
 ﻿namespace SpottedZebra.PowerTools.CommandLine
 {
     using Core;
+    using Core.Tools;
     using NDesk.Options;
     using NLog;
     using NLog.Config;
@@ -76,6 +77,7 @@
                         catch
                         {
                             Console.WriteLine("Failed to create tool. Please file a bug.");
+                            Environment.Exit((int)ExitCode.UnexpectedError);
                         }
 
                         break;
@@ -88,6 +90,7 @@
                 if (!string.IsNullOrEmpty(toolName))
                 {
                     Console.WriteLine("Tool not found: {0}", toolName);
+                    Environment.Exit((int)ExitCode.ToolNotFound);
                 }
             }
             else

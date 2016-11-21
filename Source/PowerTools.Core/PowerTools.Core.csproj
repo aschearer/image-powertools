@@ -50,9 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ILogAdapter.cs" />
+    <Compile Include="Tools\ExitCode.cs" />
     <Compile Include="Tools\OverlayText.cs" />
     <Compile Include="PowerToolAttribute.cs" />
-    <Compile Include="PowerToolBase.cs" />
+    <Compile Include="Tools\PowerToolBase.cs" />
     <Compile Include="Tools\ComposeImages.cs" />
     <Compile Include="Data\BoundingBox.cs" />
     <Compile Include="Data\BatchDescription.cs" />
