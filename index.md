@@ -2,7 +2,7 @@
 layout: default
 title: Image Power Tools
 ---
-While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating all the different versions once would have taken a while, but there was no way I was going to regenerate these images every time our strings or marketing images changed! I wrote this tool to automate the process.
+While developing [Tumblestone][1] I needed to create a lot of images. In all there were over 500 images that varied by language and platform. Creating the different versions once would have taken a while, but there was no way I was going to regenerate each image every time our strings or marketing images changed! I wrote this tool to automate the process.
 
 What it Does
 ---
@@ -12,11 +12,15 @@ Imagine you need to create Steam capsule images for an upcoming sale. You've got
     <figcaption>With OverlayText you can easily combine text and images</figcaption>
 </figure>
 
-Or perhaps your launch is approaching and you need to create end slates for your launch trailer. Your game will be launching in multiple markets and on multiple platforms, so you need end slates for every combination of platform, ratings board, and language. To be specific, if you target 3 platforms, have ratings from 3 boards, and support 8 languages then you need to create 72 images! You could brew a pot of coffee and grind through them all, or you could run `ComposeImages` and catch up on reddit.
+[Read the step by step OverlayText tutorial →][4]
+
+Or perhaps your launch is approaching and you need to create end slates for the launch trailer. Your game will be launching in multiple markets and on multiple platforms, so you need end slates for every combination of platform, ratings board, and language. To be specific, if you target 3 platforms, have ratings from 3 boards, and support 8 languages then you need to create 72 images! You could brew a pot of coffee and grind through them all, or you could run `ComposeImages` and catch up on reddit.
 <figure>
     <img src="img/composeimages-example.png" />
     <figcaption>With ComposeImages combining sets of images is a snap</figcaption>
 </figure>
+
+[Read the step by step ComposeImages tutorial →][5]
 
 How It Works
 ---
@@ -52,6 +56,6 @@ To learn about each tool, its configuration file, and how to use it in detail pl
 
 [1]: http://tumblestonegame.com
 [2]: {{ site.latest_release_url }}
-[3]: {{ project_url }}/tree/master/Examples
-[4]: {{ project_url }}/blob/master/Examples/OverlayText/OverlayTextExample.md
-[5]: {{ project_url }}/blob/master/Examples/ComposeImages/ComposeImagesExample.md
+[3]: {{ site.project_url }}/tree/master/Examples
+[4]: {{ site.project_url }}/blob/master/Examples/OverlayText/OverlayTextExample.md
+[5]: {{ site.project_url }}/blob/master/Examples/ComposeImages/ComposeImagesExample.md
