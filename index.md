@@ -9,7 +9,7 @@ What it Does
 Imagine you need to create Steam capsule images for an upcoming sale. You've got a capsule image and some localized text to be inserted in a space in the center of each image. Using the `OverlayText` tool you can do this automatically.
 <figure>
     <img src="img/overlaytext-example.png" />
-    <figcaption>With OverlayText you can easily combine text and images</figcaption>
+    <figcaption>With OverlayText you can easily add text to images</figcaption>
 </figure>
 
 [Read the step by step OverlayText tutorial →][4]
@@ -17,7 +17,7 @@ Imagine you need to create Steam capsule images for an upcoming sale. You've got
 Or perhaps your launch is approaching and you need to create end slates for the launch trailer. Your game will be launching in multiple markets and on multiple platforms, so you need end slates for every combination of platform, ratings board, and language. To be specific, if you target 3 platforms, have ratings from 3 boards, and support 8 languages then you need to create 72 images! You could brew a pot of coffee and grind through them all, or you could run `ComposeImages` and catch up on reddit.
 <figure>
     <img src="img/composeimages-example.png" />
-    <figcaption>With ComposeImages combining sets of images is a snap</figcaption>
+    <figcaption>With ComposeImages combining sets of images into a single image is a snap</figcaption>
 </figure>
 
 [Read the step by step ComposeImages tutorial →][5]
